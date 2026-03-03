@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #000;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 0.4px;
+}
+
+.hero {
+    padding: 80px 20px;
+    text-align: center;
+    border-bottom: 1px solid #111;
+}
+
+.hero h1 {
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 800;
+    letter-spacing: 6px;
+}
+
+.hero p {
+    margin-top: 12px;
+    font-size: 0.9rem;
+    opacity: 0.6;
+    text-transform: uppercase;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 60px 20px;
+}
+
+.actions {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 60px;
+}
+
+button {
+    background: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 14px 26px;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+button:hover {
+    background: #fff;
+    color: #000;
+}
+
+button.danger:hover {
+    background: #fff;
+    color: #000;
+}
+
+.panel {
+    border: 1px solid #111;
+    padding: 32px;
+    margin-bottom: 40px;
+}
+
+.panel h2 {
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    opacity: 0.6;
+}
+
+.inputs {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #333;
+    padding: 12px 6px;
+    color: #fff;
+    font-size: 0.9rem;
+    width: 260px;
+}
+
+input:focus {
+    outline: none;
+    border-bottom-color: #fff;
+}
+
+.users-section h2 {
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    margin-bottom: 30px;
+    opacity: 0.6;
+}
+
+.users-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 24px;
+}
+
+.user-card {
+    border: 1px solid #111;
+    padding: 24px;
+    transition: 0.3s ease;
+    position: relative;
+}
+
+.user-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 1px solid transparent;
+    transition: 0.3s ease;
+}
+
+.user-card:hover::before {
+    border-color: #fff;
+}
+
+.user-card:hover {
+    transform: translateY(-6px);
+}
+
+.user-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.user-card p {
+    font-size: 0.85rem;
+    opacity: 0.7;
+    margin-bottom: 12px;
+}
+
+.user-card small {
+    font-size: 0.65rem;
+    opacity: 0.4;
+    word-break: break-all;
+}
+
+@media (max-width: 600px) {
+    .actions {
+        flex-direction: column;
+    }
+
+    input {
+        width: 100%;
+    }
+}

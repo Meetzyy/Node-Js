@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Express CRUD</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    
+    <header class="hero">
+        <h1>EXPRESS CRUD</h1>
+        <p>AN API BASED CRUD PROJECT.</p>
+    </header>
+
+    <main class="container">
+
+        <section class="actions">
+            <button onclick="fetchUsers()">FETCH USERS</button>
+            <button onclick="storeUsers()">SYNC API</button>
+        </section>
+
+        <section class="panel">
+            <h2>UPDATE USER</h2>
+            <div class="inputs">
+                <input id="updateId" placeholder="USER ID">
+                <input id="updateName" placeholder="NEW NAME">
+                <button onclick="updateUser()">UPDATE</button>
+            </div>
+        </section>
+
+        <section class="panel">
+            <h2>DELETE USER</h2>
+            <div class="inputs">
+                <input id="deleteId" placeholder="USER ID">
+                <button class="danger" onclick="deleteUser()">DELETE</button>
+            </div>
+        </section>
+
+        <section class="users-section">
+            <h2>USERS</h2>
+            <div id="userList" class="users-grid"></div>
+        </section>
+
+    </main>
+
+<script src="script.js"></script>
+</body>
+</html>
